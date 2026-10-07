@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Heinock - Urban Planning</title>
+    <style>
+      body {
+        font-family: Georgia, serif;
+        background-color: #7cad9a;
+        max-width: 700px;
+        margin: 40px auto;
+        padding: 0 20px;
+        color: #f2f2f2;
+      }
+      h1 {
+        color: #065013;
+      }
+      h2 {
+        color: #a6b876;
+      }
+      h3 {
+        color: #8a1a68;
+      }
+      li {
+        margin-bottom: 8px;
+      }
+      a {
+        color: #1f4e3d;
+        font-weight: bold;
+      }
+      a:hover {
+        color: #2b96c0;
+      }
+      button {
+        background-color: #1f4e3d;
+        color: rgb(214, 195, 195);
+        border: none;
+        padding: 10px 20px;
+        font-size: 16px;
+        border-radius: 6px;
+        cursor: pointer;
+        margin-top: 20px;
+        margin-right: 10px;
+      }
+      button:hover {
+        background-color: #2ea844;
+      }
+
+      /* Dark mode styles */
+      body.dark {
+        background-color: #0b4d33;
+        color: #f2f2f2;
+      }
+      body.dark h1 {
+        color: #6fe07f;
+      }
+      body.dark h2 {
+        color: #ff8a76;
+      }
+      body.dark h3 {
+        color: #a9a0ff;
+      }
+      body.dark a {
+        color: #9be0c0;
+        
+      }
+      body.dark li,
+      body.dark p {
+        color: #f2f2f2;
+      }
+
+      
+    </style>
+  </head>
+
+  <body>
+    <h1>Urban Planning, Land Governance</h1>
+    <p>I help cities plan land use and manage urban growth.</p>
+
+    <h2>Skills</h2>
+    <ul>
+      <li>Urban Design</li>
+      <li>AutoCAD</li>
+      <li>ArchiCAD</li>
+      <li>GIS</li>
+      <li>Land Administration</li>
+    </ul>
+
+    <h3>My Profiles</h3>
+    <p>
+      <a href="https://www.upwork.com">Upwork</a> |
+      <a href="https://www.linkedin.com">LinkedIn</a>
+    </p>
+
+    <button onclick="sayHello()">Contact me</button>
+    <button onclick="toggleDark()">🌙 Dark / Light</button>
+    <p id="message"></p>
+
+    <script>
+      function sayHello() {
+        document.getElementById("message").innerText =
+          "Learning Computer Programming With My Friend Claude 👋";
+      }
+
+      function toggleDark() {
+        document.body.classList.toggle("dark");
+      }
+    </script>
+  </body>
+</html>
