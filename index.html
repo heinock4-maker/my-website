@@ -3,22 +3,23 @@
   <head>
     <title>Heinock - Urban Planning</title>
     <style>
+      /* ---------- Light mode (default) ---------- */
       body {
         font-family: Georgia, serif;
-        background-color: #7cad9a;
+        background-color: #d9e2dd;
+        color: #1a1a1a;
         max-width: 700px;
         margin: 40px auto;
         padding: 0 20px;
-        color: #f2f2f2;
       }
       h1 {
-        color: #065013;
+        color: #0b7a1f;
       }
       h2 {
-        color: #a6b876;
+        color: #c0270f;
       }
       h3 {
-        color: #8a1a68;
+        color: #2a1a8a;
       }
       li {
         margin-bottom: 8px;
@@ -28,11 +29,11 @@
         font-weight: bold;
       }
       a:hover {
-        color: #2b96c0;
+        color: #c0392b;
       }
       button {
         background-color: #1f4e3d;
-        color: rgb(214, 195, 195);
+        color: white;
         border: none;
         padding: 10px 20px;
         font-size: 16px;
@@ -42,10 +43,10 @@
         margin-right: 10px;
       }
       button:hover {
-        background-color: #2ea844;
+        background-color: #0b7a1f;
       }
 
-      /* Dark mode styles */
+      /* ---------- Dark mode ---------- */
       body.dark {
         background-color: #0b4d33;
         color: #f2f2f2;
@@ -61,14 +62,13 @@
       }
       body.dark a {
         color: #9be0c0;
-        
       }
-      body.dark li,
-      body.dark p {
-        color: #f2f2f2;
+      body.dark a:hover {
+        color: #ffffff;
       }
-
-      
+      body.dark button {
+        background-color: #2f7a57;
+      }
     </style>
   </head>
 
@@ -96,11 +96,13 @@
     <p id="message"></p>
 
     <script>
+      // Shows a message when "Contact me" is clicked
       function sayHello() {
         document.getElementById("message").innerText =
           "Learning Computer Programming With My Friend Claude 👋";
       }
 
+      // Switches between light and dark mode
       function toggleDark() {
         document.body.classList.toggle("dark");
       }
