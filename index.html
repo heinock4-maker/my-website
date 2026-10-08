@@ -1,108 +1,365 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <title>Heinock - Urban Planning</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Heinock Balemual Adane - Urban Development and Land Governance Specialist, Addis Ababa, Ethiopia."
+    />
+    <title>Heinock Balemual Adane | Urban Development &amp; Land Governance</title>
     <style>
-      /* ---------- Light mode (default) ---------- */
+      :root {
+        --bg: #f4f7f5;
+        --card: #ffffff;
+        --text: #1a1a1a;
+        --muted: #55625b;
+        --brand: #1f4e3d;
+        --accent: #c0270f;
+        --tag: #e3ece7;
+      }
+      body.dark {
+        --bg: #12201a;
+        --card: #1b2e25;
+        --text: #f2f2f2;
+        --muted: #b8c7be;
+        --brand: #6fe07f;
+        --accent: #ff8a76;
+        --tag: #264036;
+      }
+      * { box-sizing: border-box; }
+      html { scroll-behavior: smooth; scroll-padding-top: 60px; }
       body {
+        margin: 0;
         font-family: Georgia, serif;
-        background-color: #d9e2dd;
-        color: #1a1a1a;
-        max-width: 700px;
-        margin: 40px auto;
-        padding: 0 20px;
+        background: var(--bg);
+        color: var(--text);
+        line-height: 1.6;
       }
-      h1 {
-        color: #0b7a1f;
+      header {
+        background: var(--brand);
+        color: white;
+        text-align: center;
+        padding: 60px 20px;
       }
-      h2 {
-        color: #c0270f;
+      body.dark header { color: #12201a; }
+      header h1 { margin: 0 0 10px; font-size: 2.2rem; }
+      header p { margin: 4px 0; font-size: 1.1rem; }
+      nav {
+        text-align: center;
+        padding: 14px 10px;
+        background: var(--card);
+        position: sticky;
+        top: 0;
+        z-index: 10;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
       }
-      h3 {
-        color: #2a1a8a;
-      }
-      li {
-        margin-bottom: 8px;
-      }
-      a {
-        color: #1f4e3d;
+      nav a {
+        color: var(--brand);
         font-weight: bold;
+        text-decoration: none;
+        margin: 0 8px;
+        display: inline-block;
       }
-      a:hover {
-        color: #c0392b;
+      nav a:hover { color: var(--accent); }
+      main { max-width: 860px; margin: 0 auto; padding: 20px; }
+      section { margin: 40px 0; }
+      h2 {
+        color: var(--brand);
+        border-bottom: 3px solid var(--accent);
+        padding-bottom: 6px;
+        display: inline-block;
       }
-      button {
-        background-color: #1f4e3d;
+      .stats {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 14px;
+        margin-top: 24px;
+      }
+      .stat {
+        background: var(--card);
+        border-radius: 10px;
+        padding: 16px;
+        text-align: center;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      }
+      .stat strong { display: block; font-size: 1.8rem; color: var(--accent); }
+      .cards {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+        gap: 16px;
+      }
+      .card {
+        background: var(--card);
+        padding: 18px;
+        border-radius: 10px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        margin-bottom: 16px;
+      }
+      .cards .card { margin-bottom: 0; }
+      .card h3 { margin: 0 0 4px; color: var(--brand); }
+      .card ul { margin: 8px 0 0; padding-left: 20px; }
+      .card li { margin-bottom: 6px; }
+      .muted { color: var(--muted); }
+      .date { color: var(--accent); font-weight: bold; font-size: 0.95rem; }
+      .tags span {
+        display: inline-block;
+        background: var(--tag);
+        color: var(--text);
+        padding: 5px 12px;
+        border-radius: 20px;
+        margin: 4px 4px 4px 0;
+        font-size: 0.95rem;
+      }
+      button, .btn {
+        background: var(--brand);
         color: white;
         border: none;
         padding: 10px 20px;
         font-size: 16px;
+        font-family: inherit;
         border-radius: 6px;
         cursor: pointer;
-        margin-top: 20px;
-        margin-right: 10px;
+        text-decoration: none;
+        display: inline-block;
+        margin: 6px 6px 6px 0;
       }
-      button:hover {
-        background-color: #0b7a1f;
-      }
-
-      /* ---------- Dark mode ---------- */
-      body.dark {
-        background-color: #0b4d33;
-        color: #f2f2f2;
-      }
-      body.dark h1 {
-        color: #6fe07f;
-      }
-      body.dark h2 {
-        color: #ff8a76;
-      }
-      body.dark h3 {
-        color: #a9a0ff;
-      }
-      body.dark a {
-        color: #9be0c0;
-      }
-      body.dark a:hover {
-        color: #ffffff;
-      }
-      body.dark button {
-        background-color: #2f7a57;
-      }
+      body.dark button, body.dark .btn { color: #12201a; }
+      button:hover, .btn:hover { background: var(--accent); color: white; }
+      footer { text-align: center; padding: 24px; color: var(--muted); }
     </style>
   </head>
 
   <body>
-    <h1>Urban Planning, Land Governance</h1>
-    <p>I help cities plan land use and manage urban growth.</p>
+    <header>
+      <h1>Heinock Balemual Adane</h1>
+      <p>Urban Development &amp; Land Governance Specialist</p>
+      <p>Urban Design | Landscape Architecture | Land Administration | GIS</p>
+      <p>Addis Ababa, Ethiopia</p>
+    </header>
 
-    <h2>Skills</h2>
-    <ul>
-      <li>Urban Design</li>
-      <li>AutoCAD</li>
-      <li>ArchiCAD</li>
-      <li>GIS</li>
-      <li>Land Administration</li>
-    </ul>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#projects">Projects</a>
+      <a href="#experience">Experience</a>
+      <a href="#education">Education</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+    </nav>
 
-    <h3>My Profiles</h3>
-    <p>
-      <a href="https://www.upwork.com">Upwork</a> |
-      <a href="https://www.linkedin.com">LinkedIn</a>
-    </p>
+    <main>
+      <section id="about">
+        <h2>About</h2>
+        <p>
+          Urban development and land governance professional with 15+ years of
+          combined experience in architecture, technical education, municipal
+          land administration and federal urban policy in Ethiopia, including
+          five years as Advisor to two successive Federal Ministers of Urban
+          Development and Construction.
+        </p>
+        <p>
+          I was a member of the national technical taskforce behind Ethiopia's
+          Street Design Standard, and I designed multi-hectare public parks in
+          three regional cities. I combine hands-on landscape architecture and
+          land administration expertise with experience coordinating across
+          ministries and regional bureaus.
+        </p>
+        <div class="stats">
+          <div class="stat"><strong>15+</strong>Years of experience</div>
+          <div class="stat"><strong>5</strong>Years advising Federal Ministers</div>
+          <div class="stat"><strong>10+ ha</strong>Public parks designed</div>
+          <div class="stat"><strong>150+</strong>Officials trained</div>
+        </div>
+      </section>
 
-    <button onclick="sayHello()">Contact me</button>
-    <button onclick="toggleDark()">🌙 Dark / Light</button>
-    <p id="message"></p>
+      <section id="services">
+        <h2>Services</h2>
+        <div class="cards">
+          <div class="card">
+            <h3>Urban Design &amp; Master Plan Review</h3>
+            <p class="muted">Land-utility evaluations, master-plan alignment audits and layout verification using GIS, AutoCAD and ArchiCAD.</p>
+          </div>
+          <div class="card">
+            <h3>Land Governance Advisory</h3>
+            <p class="muted">Land governance frameworks, zoning compliance and land-tenure risk assessments for real estate projects.</p>
+          </div>
+          <div class="card">
+            <h3>Landscape &amp; Park Design</h3>
+            <p class="muted">Public green infrastructure, open-space planning and climate-resilient greening design.</p>
+          </div>
+          <div class="card">
+            <h3>Policy Research &amp; Analysis</h3>
+            <p class="muted">Policy briefs, monitoring and evaluation, and sector reports for decision makers.</p>
+          </div>
+          <div class="card">
+            <h3>Training &amp; Capacity Building</h3>
+            <p class="muted">Technical training for municipal officers, planners and students.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects">
+        <h2>Selected Projects</h2>
+        <div class="cards">
+          <div class="card">
+            <h3>Public Parks, Southern Ethiopia</h3>
+            <p class="muted">
+              Wolaita Sodo City Public Park (~6 ha), Alemgena Town Public Park
+              (~4 ha) and a public park in Beherawi, Arba Minch City.
+            </p>
+          </div>
+          <div class="card">
+            <h3>Ethiopia's Street Design Standard</h3>
+            <p class="muted">
+              Member of the national technical taskforce. The standard covers
+              pedestrian safety, universal design and storm-water management
+              for 25 municipal centers.
+            </p>
+          </div>
+          <div class="card">
+            <h3>Green Infrastructure Redesign</h3>
+            <p class="muted">
+              Directed an eco-friendly redesign of the Ministry's headquarters
+              compound into a 1,200 m&sup2; demonstration site for
+              ecosystem-based adaptation.
+            </p>
+          </div>
+          <div class="card">
+            <h3>Research: Entoto Natural Park</h3>
+            <p class="muted">
+              M.A. thesis on visitors' satisfaction with urban recreational park
+              services in Addis Ababa.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="experience">
+        <h2>Experience</h2>
+
+        <div class="card">
+          <h3>Lead Consultant / Senior Urban Design &amp; Land Specialist</h3>
+          <div class="date">Feb 2024 - Present</div>
+          <p class="muted">Independent Urban Development &amp; Architectural Consultancy, Addis Ababa</p>
+          <ul>
+            <li>Land-utility evaluations, master-plan alignment audits and layout verification for mixed-use and commercial projects.</li>
+            <li>Land governance advisory frameworks and compliance assessments to reduce regulatory and land-tenure risk.</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>Advisor to the Minister (Construction Sector)</h3>
+          <div class="date">Feb 2019 - Jan 2024</div>
+          <p class="muted">Ministry of Urban Development &amp; Construction, Addis Ababa</p>
+          <ul>
+            <li>Advised two successive Federal Ministers on national construction and infrastructure policy, including Results-Based Management and Theory of Change frameworks.</li>
+            <li>Directed implementation of the federal 10-Year Construction Policy roadmap, with monitoring and evaluation baselines.</li>
+            <li>Led consultations with international development partners including UN-Habitat and the World Bank.</li>
+            <li>Authored 15 policy briefs, memoranda and monitoring reports for cabinet-level decisions.</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>Senior Landscape Design Expert</h3>
+          <div class="date">Nov 2014 - Feb 2019</div>
+          <p class="muted">Ministry of Urban Development &amp; Housing, Urban Planning, Sanitation &amp; Beautification Bureau</p>
+          <ul>
+            <li>Managed federal landscape architecture strategy and city-beautification design criteria for priority municipal centers.</li>
+            <li>Trained 150 municipal officers on the National Urban Greenery Standard Manual.</li>
+            <li>Monitored compliance with ecological planning standards across 22 municipalities.</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>Senior Architect</h3>
+          <div class="date">May 2011 - Mar 2015</div>
+          <p class="muted">Sirak Lisanework Architects &amp; Engineers Consulting, Addis Ababa</p>
+          <ul>
+            <li>Led architectural design and documentation for multi-use complexes using AutoCAD and ArchiCAD.</li>
+            <li>Site feasibility, environmental impact and topological analyses.</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>Construction Follow-up &amp; Control Officer</h3>
+          <div class="date">Jun 2009 - Apr 2011</div>
+          <p class="muted">Kirkos Sub-City Administration, Land Development &amp; Management</p>
+          <ul>
+            <li>Led a technical unit of 12 inspectors and engineers, auditing building permits and enforcing zoning and land-tenure regulations.</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>Technical Instructor / Lecturer</h3>
+          <div class="date">Aug 2006 - Jul 2009</div>
+          <p class="muted">Abyot Kirs Preparatory School, Addis College, Kokeb Technology &amp; Business College, Virtual Computer Engineering PLC</p>
+          <ul>
+            <li>Taught CAD, Descriptive Geometry and Architectural Drafting; trained 450+ students and practicing engineers.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="education">
+        <h2>Education &amp; Training</h2>
+        <div class="card">
+          <h3>M.A., Urban Land Administration and Management</h3>
+          <div class="date">Addis Ababa University, 2024</div>
+        </div>
+        <div class="card">
+          <h3>B.Ed., Design and Drafting Technology</h3>
+          <div class="date">Adama University, 2006</div>
+        </div>
+        <div class="card">
+          <h3>Certifications</h3>
+          <ul>
+            <li>Registered Professional, Architectural Design Technologist, Addis Ababa City Administration</li>
+            <li>Applied Research Methodology and Policy Formulation &amp; Analysis (104 hrs), Ethiopian Civil Service University, 2017</li>
+            <li>Urban Land Development and Management, Levels II-IV, RCMRD, 2015</li>
+            <li>Urban Plan Preparation and Implementation, Urban Planning, Sanitation and Beautification Bureau, 2014</li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="skills">
+        <h2>Skills</h2>
+        <div class="tags">
+          <span>Urban Design</span>
+          <span>Landscape Architecture</span>
+          <span>Land Administration</span>
+          <span>Land Governance</span>
+          <span>GIS</span>
+          <span>ArcGIS</span>
+          <span>QGIS</span>
+          <span>Remote Sensing</span>
+          <span>AutoCAD</span>
+          <span>ArchiCAD</span>
+          <span>EIA</span>
+          <span>Policy Analysis</span>
+          <span>Results-Based Management</span>
+          <span>Monitoring &amp; Evaluation</span>
+          <span>Training &amp; Facilitation</span>
+          <span>MS Office</span>
+        </div>
+        <p class="muted">Languages: Amharic (mother tongue), English (professional).</p>
+      </section>
+
+      <section id="contact">
+        <h2>Contact</h2>
+        <p>Let's work together on your next urban, land or design project.</p>
+        <a class="btn" href="mailto:tooheinock@outlook.com">Email me</a>
+        <a class="btn" href="https://www.linkedin.com/in/heinock-adane-89546011a" target="_blank">LinkedIn</a>
+        <a class="btn" href="https://www.upwork.com/freelancers/~012c679de2584811f7" target="_blank">Upwork</a>
+        <br />
+        <button onclick="toggleDark()">🌙 Dark / Light</button>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2026 Heinock Balemual Adane | Addis Ababa, Ethiopia</p>
+    </footer>
 
     <script>
-      // Shows a message when "Contact me" is clicked
-      function sayHello() {
-        document.getElementById("message").innerText =
-          "Learning Computer Programming With My Friend Claude 👋";
-      }
-
-      // Switches between light and dark mode
       function toggleDark() {
         document.body.classList.toggle("dark");
       }
